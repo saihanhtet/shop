@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: rgb(132, 132, 240);
+}
+
+body{
+    background-color: var(--primary-color);
+}
+.container-fluid{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 1px 5px;
+}
+.container-fluid .nav .input-border{
+    background-color: var(--primary-color) !important;
+}
+.container-fluid .nav .border-info{
+    border-color: var(--primary-color) !important;
+}
+.container-fluid .content{
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}

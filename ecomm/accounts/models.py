@@ -1,3 +1,4 @@
+
 from django.db import models
 from django.contrib.auth.models import User
 from base.models import BaseModel
@@ -8,11 +9,11 @@ from base.email import send_account_activation_email
 
 
 class Profile(BaseModel):
-    User = models.OneToOneField(
-        User, on_delete=models.CASCADE, related_name='profile')
+    user = models.OneToOneField(
+        User, on_delete=models.CASCADE, related_name="profile")
     is_email_verified = models.BooleanField(default=False)
     email_token = models.CharField(max_length=100, null=True, blank=True)
-    profile_img = models.ImageField(upload_to='profile')
+    profile_image = models.ImageField(upload_to='profile')
 
 
 @receiver(post_save, sender=User)

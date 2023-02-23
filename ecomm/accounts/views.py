@@ -46,8 +46,10 @@ def register_page(request):
         user_obj = User.objects.create(
             first_name=first_name, last_name=last_name, email=email, username=email)
         user_obj.set_password(password)
-        print(user_obj)
+
         user_obj.save()
+        messages.success(request, 'An email has been sent on your mail.')
+        return HttpResponseRedirect(request.path_info)
 
     return render(request, 'accounts/register.html')
 

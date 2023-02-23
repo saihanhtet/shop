@@ -12,10 +12,12 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="{% static 'base/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'base/base.css' %}" />
   </head>
   <body>
     <div class="container-fluid">
-      {% include 'base/navbar.html' %}
+      <div class="nav">{% include 'base/navbar.html' %}</div>
       <div class="content">{% block content %} {% endblock content %}</div>
     </div>
 
