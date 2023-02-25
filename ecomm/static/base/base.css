@@ -1,34 +1,53 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --primary-color: rgb(132, 132, 240);
+:root {
+  --bg: #add8e6;
+  --card-bg: #232b2e;
+  --brand-font: "Raleway", sans-serif;
+  --body-font: "Inter", sans-serif;
+  --active: yellow;
 }
 
-body{
-    background-color: var(--primary-color);
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg);
+  font-family: var(--body-font);
 }
-.container-fluid{
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    padding: 1px 5px;
+
+.navbar-dark {
+  color: var(--bg) !important;
 }
-.container-fluid .nav .input-border{
-    background-color: var(--primary-color) !important;
+.bg-dark {
+  background-color: var(--card-bg) !important;
 }
-.container-fluid .nav .border-info{
-    border-color: var(--primary-color) !important;
+
+.container-fluid.main {
+  width: 100%;
+  background-color: yellowgreen;
+  padding: 0;
 }
-.container-fluid .content{
-    background-color: #fff;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-}
+
+/*
+'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+
+
+*/

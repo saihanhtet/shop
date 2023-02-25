@@ -1,7 +1,26 @@
-{% extends 'base/base.html' %}
-
-{% block content %}
+{% extends 'base/base.html' %} {% block content %}
 <div class="home">
-    
+  {% for i in products %}
+  <div class="card">
+    <img
+      src="https://media.istockphoto.com/id/623519780/photo/sparkling-cola-bubbles.jpg?b=1&s=170667a&w=0&k=20&c=n3cqZpBB0QTeGlDABH1H8xuuSRwXko0qiw30ijvIvYA="
+      alt="product_img"
+    />
+    <div class="tools">
+      <div class="circle">
+        <span class="red box"></span>
+      </div>
+      <div class="circle">
+        <span class="yellow box"></span>
+      </div>
+      <div class="circle">
+        <span class="green box"></span>
+      </div>
+    </div>
+    <div class="card_content">
+      <div class="title">Coca Cola</div>
+    </div>
+  </div>
+  {% endfor %}
 </div>
 {% endblock content%}
